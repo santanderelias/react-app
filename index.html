@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <script src="console/hnl.mobileconsole.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="banner"></div>
+    <footer>
+        <p>footer</p>
+    </footer>
+    <script type="text/babel">
+        const Banner = () => {
+            const title = "Welcomee"
+            const subtitle = "this is the subtitle !"
+            const address = "localhost:36341"
+            // const handleClick = (e) => {
+            //     console.log('button clicked')
+            //     console.log('the site title is ', title)
+            //     console.log(e)
+            // }
+
+            return (
+                <div className='thisisaclass'>
+                    <h1>{title.toUpperCase()}</h1>
+                    <h2>{subtitle.toUpperCase()}</h2>   
+                    <a href={address}>visit {address}</a>
+                    <p><button onClick={ (e) => console.log(e) }>Click me</button></p>
+                </div>
+            )
+        }
+        // render the component to the DOM 
+        //<p>today's date is: {new Date().toDateString()} </p>
+        //<p>Random number: {Math.random() * 100} </p> 
+        ReactDOM.render(<Banner />, document.getElementById('banner'))
+    </script>
+    <script type="text/javascript">
+        setTimeout(() => {
+        document.querySelector('.mobile-console').style.display
+        = "none"; }, "10")	
+    </script>
+</body>
+</html>
